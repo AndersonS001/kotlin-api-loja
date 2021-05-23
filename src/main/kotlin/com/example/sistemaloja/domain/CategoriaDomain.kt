@@ -7,7 +7,7 @@ import org.springframework.data.mongodb.core.mapping.Document
 data class CategoriaDomain (
 
     @Id
-    val id: String,
+    val id: String? = null,
 
-    val nome: String
+    var nome: String
 )
