@@ -8,17 +8,17 @@ import javax.management.monitor.StringMonitor
 
 @Document(collection = "pessoa")
 data class PessoaDomain(
-        @Id
-        val id : String,
+    @Id
+    var id: String? = null,
 
-        val name: String,
+    val name: String,
 
-        val email: String,
+    val email: String?,
 
-        val phone: String,
+    val phone: String?,
 
-        val address: List<EnderecoModel>,
+    val address: List<EnderecoModel>?,
 
-        @DBRef
-        val orders: List<OrderDomain>
+    @DBRef
+    var orders: List<OrderDomain>? = null
 )
