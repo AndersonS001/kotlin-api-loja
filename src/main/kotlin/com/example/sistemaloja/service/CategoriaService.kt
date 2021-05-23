@@ -40,11 +40,11 @@ class CategoriaService(val categoriaRepository: CategoriaRepository) {
     }
 
     @Throws(ResponseStatusException::class)
-    private fun findById(id: String): CategoriaDomain {
+    fun findById(id: String): CategoriaDomain {
         val findById = categoriaRepository.findById(id)
 
         if(!findById.isPresent)
-            throw ResponseStatusException(HttpStatus.NOT_FOUND, "Categoria não encontrada")
+            throw ResponseStatusException(HttpStatus.NOT_FOUND, "Categoria $id não encontrada")
 
         return findById.get()
     }

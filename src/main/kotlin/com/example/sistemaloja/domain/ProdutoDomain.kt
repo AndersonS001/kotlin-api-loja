@@ -5,14 +5,14 @@ import org.springframework.data.mongodb.core.mapping.Document
 
 @Document(collection = "produto")
 data class ProdutoDomain(
-        @Id
-        val id: String,
+    @Id
+    var id: String? = null,
 
-        val name: String,
+    val name: String,
 
-        val price: Double,
+    val price: Double,
 
-        val quantity: Integer,
+    val quantity: Integer,
 
-        val categories: Set<CategoriaDomain>
+    var categories: Set<CategoriaDomain>? = null
 )
