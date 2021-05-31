@@ -8,11 +8,11 @@ import com.fasterxml.jackson.annotation.JsonInclude
 data class SaidaProdutoModel(
     val id: String?,
 
-    val nome: String,
+    val nome: String?,
 
-    val preco: Double,
+    val preco: Double?,
 
-    val quantidade: Integer,
+    val quantidade: Integer?,
 
     val categorias: Set<CategoriaDomain>?
 )
